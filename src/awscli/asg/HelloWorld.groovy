@@ -1,10 +1,15 @@
 package awscli.asg
 
 class HelloWorld {
-  def sayHello(){
-      println "hello world"
+    private String privatestr
+
+    def callInnerMethod() {
+        new Inner().methodA()
     }
-    // static void sayHello() {
-    // return "Hello, World!"
-    // }
+    
+    class Inner {
+        def methodA() {
+            println privatestr
+        }
+    }
 }

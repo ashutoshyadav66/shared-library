@@ -1,4 +1,6 @@
 def call() {
-    println awscli.asg.HelloWorld.sayHello()
+    def outer = new Outer()
+    outer.privatestr = "Hello, Inner!"
+    outer.callInnerMethod()
 }
 
