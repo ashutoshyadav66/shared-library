@@ -1,3 +1,4 @@
 def call() {
-    awscli.asg.helloWorld.sayHello()
+    org.example.HelloWorld.sayHello()
 }
+

@@ -1,6 +1,6 @@
-package awscli.asg
+package org.example
 
-class helloWorld {
+class HelloWorld {
     static void sayHello() {
         println "Hello, World!"
     }
