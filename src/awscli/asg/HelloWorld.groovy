@@ -9,7 +9,7 @@ class HelloWorld {
     
     class Inner {
         def methodA() {
-            println privatestr
+            return privatestr
         }
     }
 }
