@@ -1,6 +1,6 @@
 package awscli.asg
 
-class HelloWorld {
+class helloWorld {
     static void sayHello() {
         println "Hello, World!"
     }
