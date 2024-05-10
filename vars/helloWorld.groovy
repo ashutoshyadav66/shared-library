@@ -1,4 +1,4 @@
 def call() {
-    println org.example.HelloWorld.sayHello()
+    println awscli.asg.HelloWorld.sayHello()
 }
 

@@ -1,4 +1,4 @@
-package org.example
+package awscli.asg
 
 class HelloWorld {
     static void sayHello() {
