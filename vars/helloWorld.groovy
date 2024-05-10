@@ -1,4 +1,4 @@
 def call() {
-    org.example.HelloWorld.sayHello()
+    println org.example.HelloWorld.sayHello()
 }
 
