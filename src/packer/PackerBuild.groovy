@@ -1,9 +1,7 @@
 package packer
 
-import groovy.transform.Field
-
 class PackerBuild {
-    @Field String packerFile
+    String packerFile
     
     PackerBuild(String packerFile) {
         this.packerFile = packerFile
