@@ -10,8 +10,10 @@ class PackerBuild {
     }
   }
 
-  def build(String config_file) {
-    return "packer build ${config_file}"
+  def build(String config_dir, String config_file) {
+    dir(config_dir) {
+      return "packer build ${config_file}"
+    }
   }
 }
 
