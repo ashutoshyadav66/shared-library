@@ -1,4 +1,5 @@
 def call() {
   def packer = new packer.PackerBuild('cocktails.pkr.hcl')
-  packer.build()
+  sh packer.init()
+  sh packer.build()
   }
