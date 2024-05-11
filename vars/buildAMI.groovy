@@ -11,12 +11,13 @@ def call() {
     if (output.contains('amazon-ebs.cocktails: AMIs were created:')) {
       def amiId = output =~ /(?<=AMIs were created:\n\w+: )ami-\w+/
 
-        if (amiId) {
-          echo "AMI ID: ${amiId[0]}"
-        } else {
-          echo "No AMI ID found."
-        }
+        def lines = output.split('\n')
+        def lastLine = lines[-1] 
+        println lastLine
+        def amiId = lastLine =~ /ami-\w+/
+        println amiId
     } else {
-      echo "Output does not contain 'amazon-ebs.cocktails: AMIs were created:'."
-    } 
+      echo "${output}"
+        return 1
+    }
 }
