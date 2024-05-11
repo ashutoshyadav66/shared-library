@@ -6,11 +6,8 @@ class PackerBuild {
       this.packerFile = packerFile
     }
 
-  def packerInit() {
-    return "packer init ."
-  }
   def build(){
-    packerInit()
+    return "packer build ${packerFile}"
 
   }
 }
