@@ -6,14 +6,14 @@ def call() {
 
     sh packer.init(config_dir)
 
-    def output = sh(script: packer.build(config_dir, config_file), returnStdout: true).trim()
+    def output = sh(script: packer.build(config_dir, config_file), returnStdout: true)
 
     if (output.contains('amazon-ebs.cocktails: AMIs were created:')) {
         def lines = output.split('\n')
         def lastLine = lines[-1] 
-        println lastLine
-        def amiId = lastLine =~ /ami-\w+/
+        def amiId = lastLine.split(': ')[-1]
         println amiId
+
     } else {
       echo "${output}"
         return 1
