@@ -1,5 +1,5 @@
 def call() {
-  def packer = new packer.PackerBuild()
+  def packer = new packer.awsAMI()
     def config_dir = 'intro-to-packer'
     def config_file = 'cocktails.pkr.hcl'
     sh packer.init(config_dir)

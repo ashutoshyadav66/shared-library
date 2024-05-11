@@ -1,6 +1,6 @@
 package packer
 
-class PackerBuild {
+class awsAMI {
 
   def init(String dir) {
     if (dir != null) {
