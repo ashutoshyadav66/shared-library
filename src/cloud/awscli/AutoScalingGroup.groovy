@@ -8,6 +8,8 @@ class AutoScalingGroup {
     AutoScalingGroup(name, client) {
         this.name = name
         this.client = client
+
+        println 'hello from'+ name
     }
 }
 
