@@ -11,7 +11,9 @@ class PackerBuild {
   }
 
   def build(String config_dir, String config_file) {
-    dir(config_dir) {
+    if (config_dir != null) {
+      return "cd ${config_dir} && packer build ${config_file}"
+    } else {
       return "packer build ${config_file}"
     }
   }
