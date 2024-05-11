@@ -9,7 +9,7 @@ class AutoScalingGroup {
         this.name = name
         this.client = client
 
-        println 'hello from'+ name
+        return 'hello from'+ name
     }
 }
 
