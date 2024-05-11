@@ -1,4 +1,4 @@
 def call() {
-  def packer = new Packer.PackerBuild()
+  def packer = new packer.PackerBuild()
   sh packer.build()
   }
