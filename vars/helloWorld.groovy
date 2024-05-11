@@ -1,6 +1,7 @@
+
 def call() {
-    def outer = new awscli.asg.HelloWorld()
-    outer.privatestr = "Hello, Inner!"
-    println outer.callInnerMethod()
+    def asg = new cloud.awscli.AutoScalingGroup('Ashutosh', 'pw')
+    println asg.name
+    
 }
 
