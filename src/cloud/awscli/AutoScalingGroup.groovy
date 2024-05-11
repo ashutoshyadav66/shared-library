@@ -9,7 +9,9 @@ class AutoScalingGroup {
         this.name = name
         this.client = client
 
-        return 'hello from'+ name
+        def printMsg() {
+          return 'hello from'+ name
+          }
     }
 }
 
