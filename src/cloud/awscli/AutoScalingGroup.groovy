@@ -10,8 +10,8 @@ class AutoScalingGroup {
         this.client = client
 
     }
-  def printMsg() {
-    return 'hello from'+ name
+  def describeInstances() {
+    return 'aws ec2 describe-instances'
   }
 
 }
