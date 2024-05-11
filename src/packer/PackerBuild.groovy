@@ -1,18 +1,25 @@
 package packer
 
+import groovy.transform.Field
+
 class PackerBuild {
-  String packerFile
-    PackerBuild(packerFile) {
-      this.packerFile = packerFile
+    @Field String packerFile
+    
+    PackerBuild(String packerFile) {
+        this.packerFile = packerFile
     }
 
-  def init() {
-      sh 'packer init .'
+    def init() {
+        script {
+            sh "packer init ."
+        }
     }
 
-  def build(){
-    init()
-    sh "packer build ${packerFile}"
-
-  }
+    def build() {
+        init()
+        script {
+            sh "packer build ${packerFile}"
+        }
+    }
 }
+
