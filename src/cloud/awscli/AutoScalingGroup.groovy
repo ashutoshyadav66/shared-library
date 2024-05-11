@@ -11,7 +11,7 @@ class AutoScalingGroup {
 
     }
   def describeInstances() {
-    return 'aws ec2 describe-instances'
+    return "aws ec2 describe-instances ${name} and ${client}"
   }
 
 }
