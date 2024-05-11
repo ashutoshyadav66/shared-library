@@ -1,11 +1,6 @@
 package packer
 
 class PackerBuild {
-  String packerFile
-
-    PackerBuild(String packerFile) {
-      this.packerFile = packerFile
-    }
 
   def init(String dir) {
     if (dir != null) {
@@ -15,8 +10,8 @@ class PackerBuild {
     }
   }
 
-  def build() {
-    return "packer build ${packerFile}"
+  def build(String config_file) {
+    return "packer build ${config_file}"
   }
 }
 
