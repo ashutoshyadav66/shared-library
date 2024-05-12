@@ -1,7 +1,7 @@
 package cloud.awscli.ec2
 
 class LaunchTemplate {
-  def createVersion(String launchTemplateId, String sourceVersion, String amiId) {
+  def createVersion(String launchTemplateId, int sourceVersion, String amiId) {
     if (sourceVersion == null) {
       return """
         aws ec2 create-launch-template-version \\
