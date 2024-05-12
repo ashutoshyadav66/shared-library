@@ -1,4 +1,4 @@
-package cloud.awscli.ec2
+package org.optree.cloud.awscli.ec2
 
 class LaunchTemplate {
   String launchTemplateId

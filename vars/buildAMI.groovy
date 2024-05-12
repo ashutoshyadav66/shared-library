@@ -1,6 +1,6 @@
 def call(String config_dir, String config_file) {
 
-  def packer = new packer.awsAMI()
+  def packer = new org.opstree.packer.awsAMI()
 
     sh packer.init(config_dir)
 

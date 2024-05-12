@@ -1,4 +1,4 @@
-package packer
+package org.opstree.packer
 
 class awsAMI {
 
