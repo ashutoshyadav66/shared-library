@@ -6,10 +6,11 @@ class AutoScalingGroup {
         this.asgName =asgName 
       }
 
-      def startInstanceRefresh(){
+      def startInstanceRefresh(int warmUpTime: 300){
           return """
             aws autoscaling start-instance-refresh \\
             --auto-scaling-group-name ${asgName} \\
+            --preferences '{"InstanceWarmup": "${warmUpTime}"}'
           """
         }
   }
