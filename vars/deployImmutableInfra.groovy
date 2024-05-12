@@ -6,5 +6,6 @@ def call() {
     def jsonObject = jsonSlurper.parseText(output)
     def launchTemplateId = jsonObject.LaunchTemplateVersion.LaunchTemplateId
     def versionNumber = jsonObject.LaunchTemplateVersion.VersionNumber
-    sh launchTemplate.modifyLaunchTemplate("lt-0be196a4ebe44a88b", "19")
+    def newLaunchTemplate = new cloud.awscli.ec2.LaunchTemplate()
+    sh newLaunchTemplate.modifyLaunchTemplate("lt-0be196a4ebe44a88b", "19")
 }
