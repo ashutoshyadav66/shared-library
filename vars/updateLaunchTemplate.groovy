@@ -8,7 +8,7 @@ def call(String launchTemplateId, String amiId) {
 
     def output = sh(script: launchTemplate.createVersion(launchTemplateId, defaultVersion[-1], amiId), returnStdout: true).trim()
 
-    println "Created new version of ${defaultVersion[1]} launch template"
+    println "Created new version of ${defaultVersion[0]} launch template"
 
     def jsonOutput = readJSON text: output
 
