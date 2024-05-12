@@ -10,7 +10,7 @@ class AutoScalingGroup {
           return """
             aws autoscaling start-instance-refresh \\
             --auto-scaling-group-name ${asgName} \\
-            --preferences '{"InstanceWarmup": ${warmUpTime}, "MinHealthyPercentage": 100, "MinHealthyPercentage": 110}'
+            --preferences '{"InstanceWarmup": ${warmUpTime}, "MinHealthyPercentage": 100, "MaxHealthyPercentage": 110}'
           """
         }
   }
