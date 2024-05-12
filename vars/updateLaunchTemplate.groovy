@@ -15,5 +15,5 @@ def call(String launchTemplateId, String amiId) {
     def versionNumber = jsonOutput.LaunchTemplateVersion.VersionNumber
 
   sh launchTemplate.modifyLaunchTemplate(launchTemplateId, versionNumber)
-  println "Updated default launch template version to ${versionNumber}"
+  println "Made default launch template ${defaultVersion[0]} to ${versionNumber} version"
 }
