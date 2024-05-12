@@ -1,15 +1,15 @@
 package org.opstree.cloud.awscli.ec2.AutoScalingGroup
 
 class AutoScalingGroup {
-    String asgId
-    AutoScalingGroup(String asgId){
+    String asgName
+    AutoScalingGroup(String asgName){
         this.asgId = asgId
       }
 
       def startInstanceRefresh(){
           return """
             aws autoscaling start-instance-refresh \\
-            --auto-scaling-group-name ${asgId} \\
+            --auto-scaling-group-name ${asgName} \\
           """
         }
   }
