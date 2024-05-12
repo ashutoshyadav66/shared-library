@@ -3,7 +3,7 @@ package org.opstree.cloud.awscli.ec2
 class AutoScalingGroup {
     String asgName
     AutoScalingGroup(String asgName){
-        this.asgId = asgId
+        this.asgName =asgName 
       }
 
       def startInstanceRefresh(){
