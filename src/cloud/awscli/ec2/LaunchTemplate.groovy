@@ -1,7 +1,8 @@
 package cloud.awscli.ec2
 
 class LaunchTemplate {
-  def createVersion(String launchTemplateId, int sourceVersion, String amiId) {
+  String launchTemplateId
+  def createVersion(int sourceVersion, String amiId) {
     if (sourceVersion == null) {
       return """
         aws ec2 create-launch-template-version \\
@@ -19,15 +20,15 @@ class LaunchTemplate {
     }
   }
 
-  def modifyLaunchTemplate(String id, int defaultVersion) {
+  def modifyLaunchTemplate(int defaultVersion) {
     return """
       aws ec2 modify-launch-template \\
-      --launch-template-id ${id} \\
+      --launch-template-id ${launchTemplateId} \\
       --default-version ${defaultVersion}
     """
   }
 
-  def getDefaultVersion(String launchTemplateId){
+  def getDefaultVersion(){
     return """
       aws ec2 describe-launch-template-versions --launch-template-id  ${launchTemplateId} \\
       --query 'LaunchTemplateVersions[?DefaultVersion == `true`].[LaunchTemplateName,LaunchTemplateId,VersionNumber][]'
