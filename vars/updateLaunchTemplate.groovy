@@ -1,6 +1,6 @@
 def call(String launchTemplateId, String amiId) {
   def launchTemplate = new cloud.awscli.ec2.LaunchTemplate()
-    def defaultVersion = sh(script: launchTemplate.getDefaultVersion(launchTemplateId), returnStdout: true).trim()
+    def defaultVersion = readJSON text: sh(script: launchTemplate.getDefaultVersion(launchTemplateId), returnStdout: true).trim()
 
     println defaultVersion
     def output = sh(script: launchTemplate.createVersion(launchTemplateId, "10", amiId), returnStdout: true).trim()

@@ -30,7 +30,7 @@ class LaunchTemplate {
   def getDefaultVersion(String launchTemplateId){
     return """
       aws ec2 describe-launch-template-versions --launch-template-id  ${launchTemplateId} \\
-      --query 'LaunchTemplateVersions[?DefaultVersion == `true`].[LaunchTemplateName,LaunchTemplateId,VersionNumber]'
+      --query 'LaunchTemplateVersions[?DefaultVersion == `true`].[LaunchTemplateName,LaunchTemplateId,VersionNumber][]'
       """
   }
 }
