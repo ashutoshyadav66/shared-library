@@ -19,7 +19,7 @@ class LaunchTemplate {
     }
   }
 
-  def modifyLaunchTemplate(String launchTemplateId, int defaultVersion) {
+  def modifyLaunchTemplate(String launchTemplateId, Integer defaultVersion) {
     return """
       aws ec2 modify-launch-template \\
       --launch-template-id ${launchTemplateId} \\
