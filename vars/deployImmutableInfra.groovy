@@ -6,5 +6,5 @@ def call() {
     def jsonObject = jsonSlurper.parseText(output)
     def launchTemplateId = jsonObject.LaunchTemplateVersion.LaunchTemplateId
     def versionNumber = jsonObject.LaunchTemplateVersion.VersionNumber
-    sh launchTemplate.modifyLaunchTemplate(launchTemplateId, 15)
+    sh launchTemplate.modifyLaunchTemplate(launchTemplateId, versionNumber)
 }
