@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurper
+// import groovy.json.JsonSlurper
 
 def call() {
   def launchTemplate = new cloud.awscli.ec2.LaunchTemplate()
