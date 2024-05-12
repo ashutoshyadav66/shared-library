@@ -1,4 +1,4 @@
-package org.opstree.cloud.awscli.ec2.AutoScalingGroup
+package org.opstree.cloud.awscli.ec2
 
 class AutoScalingGroup {
     String asgName
